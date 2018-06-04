@@ -40,5 +40,12 @@ describe('Array #myEach()', () => {
         assert.strictEqual(index, 0);
       });
     });
+
+    it('should pass in original array as third argument to callback', () => {
+      let testArray = ['item', 'item'];
+      testArray.myEach(function callback(element, index, originalArray) {
+        assert.strictEqual(originalArray, testArray);
+      });
+    });
   });
 });
