@@ -27,4 +27,12 @@ describe('Array #myEach()', () => {
       assert.strictEqual(numberOfTimesCallbackHasRun, 3);
     });
   });
+
+  context('callback parameters', () => {
+    it('should pass in ith element as first argument to callback', () => {
+      ['item'].myEach(function callback(element) {
+        assert.strictEqual(element, 'item');
+      });
+    });
+  });
 });
