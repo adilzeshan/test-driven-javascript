@@ -56,4 +56,12 @@ describe('Array #myEach()', () => {
       }, { prop: 'I am accessible inside the callback.' });
     });
   });
+
+  context('return value', () => {
+    it('should return undefined', () => {
+      let myEachResult = ['item'].myEach(function callback() { });
+
+      assert.strictEqual(myEachResult, undefined);
+    });
+  });
 });
