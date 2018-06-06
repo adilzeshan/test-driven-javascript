@@ -34,5 +34,11 @@ describe('Array #myFilter()', () => {
         assert.strictEqual(element, 'item');
       });
     });
+
+    it('should pass in ith position as second argument to callback', () => {
+      ['item'].myFilter(function callback(element, index) {
+        assert.strictEqual(index, 0);
+      });
+    });
   });
 });
