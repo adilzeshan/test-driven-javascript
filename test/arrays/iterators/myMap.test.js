@@ -49,4 +49,12 @@ describe('Array #myMap()', () => {
       });
     });
   });
+
+  context('optional parameter', () => {
+    it('should accept an optional parameter', () => {
+      ['item'].myMap(function callback() {
+        assert.strictEqual(this.prop, 'I am accessible inside the callback.');
+      }, { prop: 'I am accessible inside the callback.' });
+    });
+  });
 });
