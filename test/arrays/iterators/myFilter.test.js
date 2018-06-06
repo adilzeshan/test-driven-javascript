@@ -64,5 +64,13 @@ describe('Array #myFilter()', () => {
 
       assert.strictEqual(Array.isArray(output), true);
     });
+
+    it('should return a new array, not the original array', () => {
+      const originalArray = ['item'];
+
+      const newArray = originalArray.myFilter(function callback() { });
+
+      assert.notStrictEqual(newArray, originalArray);
+    });
   });
 });
