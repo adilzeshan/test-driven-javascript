@@ -57,4 +57,12 @@ describe('Array #myFilter()', () => {
       }, { prop: 'I am accessible inside the callback.' });
     });
   });
+
+  context('return value', () => {
+    it('should return an array', () => {
+      const output = ['item'].myFilter(function callback() { });
+
+      assert.strictEqual(Array.isArray(output), true);
+    });
+  });
 });
