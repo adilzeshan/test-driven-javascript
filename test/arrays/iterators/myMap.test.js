@@ -57,4 +57,12 @@ describe('Array #myMap()', () => {
       }, { prop: 'I am accessible inside the callback.' });
     });
   });
+
+  context('return value', () => {
+    it('should return an array', () => {
+      const output = ['item'].myMap(function callback() { });
+
+      assert.strictEqual(Array.isArray(output), true);
+    });
+  });
 });
