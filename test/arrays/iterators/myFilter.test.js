@@ -49,4 +49,12 @@ describe('Array #myFilter()', () => {
       });
     });
   });
+
+  context('optional parameter', () => {
+    it('should accept an optional parameter', () => {
+      ['item'].myFilter(function callback() {
+        assert.strictEqual(this.prop, 'I am accessible inside the callback.');
+      }, { prop: 'I am accessible inside the callback.' });
+    });
+  });
 });
