@@ -8,7 +8,7 @@ This project reimplements various built-in JavaScript methods using test-driven 
 | Native        | Custom         | Test Suite   | Implementation
 |:------------- |:---------------|:-------------|:--------------
 | [`.forEach`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) | `.myEach`       | [`myEach.test.js`](/test/arrays/iterators/myEach.test.js) | [`myEach.js`](/lib/arrays/iterators/myEach.js) |
-| [`.map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) | `.myMap`        | | |
+| [`.map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) | `.myMap`        | [`myMap.test.js`](/test/arrays/iterators/myMap.test.js) | [`myMap.js`](/lib/arrays/iterators/myMap.js) |
 | [`.filter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) | `.myFilter`     | | |
 | [`.reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) | `.myReduce`     | | |
 | [`.reduceRight`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) | `.myReduceRight`| | |
