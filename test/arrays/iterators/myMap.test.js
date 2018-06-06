@@ -80,5 +80,12 @@ describe('Array #myMap()', () => {
 
       assert.strictEqual(mappedArray[0], 2);
     });
+
+    it('should preserve undeclared indices in the mapped array', () => {
+      const mappedArray = [, 'item'].myMap(function callback() { });
+
+      assert.strictEqual(0 in mappedArray, false);
+      assert.strictEqual(mappedArray.length, 2);
+    });
   });
 });
