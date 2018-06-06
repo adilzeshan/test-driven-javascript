@@ -72,5 +72,14 @@ describe('Array #myFilter()', () => {
 
       assert.notStrictEqual(newArray, originalArray);
     });
+
+    it('should return a filtered array', () => {
+      const filteredArray = [0, 1].myFilter(function callback(element) {
+        return element;
+      });
+
+      assert.strictEqual(filteredArray[0], 1);
+      assert.strictEqual(filteredArray.length, 1);
+    });
   });
 });
