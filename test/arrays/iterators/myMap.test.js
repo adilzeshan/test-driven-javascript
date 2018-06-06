@@ -64,5 +64,13 @@ describe('Array #myMap()', () => {
 
       assert.strictEqual(Array.isArray(output), true);
     });
+
+    it('should return a new array, not the original array', () => {
+      const originalArray = ['item'];
+
+      const newArray = originalArray.myMap(function callback() { });
+
+      assert.notStrictEqual(newArray, originalArray);
+    });
   });
 });
