@@ -72,5 +72,13 @@ describe('Array #myMap()', () => {
 
       assert.notStrictEqual(newArray, originalArray);
     });
+
+    it('should return a mapped array', () => {
+      const mappedArray = [1].myMap(function callback(element) {
+        return element * 2;
+      });
+
+      assert.strictEqual(mappedArray[0], 2);
+    });
   });
 });
