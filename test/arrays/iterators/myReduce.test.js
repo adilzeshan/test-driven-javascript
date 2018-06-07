@@ -65,6 +65,16 @@ describe('Array #myReduce()', () => {
 
         assert.strictEqual(result, 'initial value');
       });
+
+      it('should not run callback at all', () => {
+        let numberOfTimesCallbackHasRun = 0;
+
+        [].myReduce(function callback() {
+          numberOfTimesCallbackHasRun++;
+        }, 'initial value');
+
+        assert.strictEqual(numberOfTimesCallbackHasRun, 0);
+      });
     });
   });
 });
