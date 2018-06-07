@@ -36,5 +36,17 @@ describe('Array #myReduce()', () => {
         }, 'initial value');
       });
     });
+
+    context('array is sparse', () => {
+      it('should not run callback on missing indices at start of array', () => {
+        let numberOfTimesCallbackHasRun = 0;
+
+        [, 'item'].myReduce(function callback() {
+          numberOfTimesCallbackHasRun++;
+        }, 'initial value');
+
+        assert.strictEqual(numberOfTimesCallbackHasRun, 1);
+      });
+    });
   });
 });
