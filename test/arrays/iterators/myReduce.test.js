@@ -16,5 +16,13 @@ describe('Array #myReduce()', () => {
         assert.strictEqual(numberOfTimesCallbackHasRun, 3);
       });
     });
+
+    context('callback parameters', () => {
+      it('should start by setting first argument to initial value', () => {
+        ['item'].myReduce(function callback(accumulator) {
+          assert.strictEqual(accumulator, 'initial value');
+        }, 'initial value');
+      });
+    });
   });
 });
