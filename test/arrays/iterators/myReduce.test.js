@@ -58,5 +58,13 @@ describe('Array #myReduce()', () => {
         assert.strictEqual(numberOfTimesCallbackHasRun, 2);
       });
     });
+
+    context('array is empty', () => {
+      it('should return initial value', () => {
+        const result = [].myReduce(function callback() { }, 'initial value');
+
+        assert.strictEqual(result, 'initial value');
+      });
+    });
   });
 });
