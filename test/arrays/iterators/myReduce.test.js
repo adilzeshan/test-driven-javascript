@@ -29,6 +29,12 @@ describe('Array #myReduce()', () => {
           assert.strictEqual(currentValue, 'item');
         }, 'initial value');
       });
+
+      it('should start by setting third argument to first index', () => {
+        ['item'].myReduce(function callback(accumulator, currentValue, index) {
+          assert.strictEqual(index, 0);
+        }, 'initial value');
+      });
     });
   });
 });
