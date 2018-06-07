@@ -66,6 +66,15 @@ describe('Array #myReduce()', () => {
 
         assert.strictEqual(numberOfTimesCallbackHasRun, 2);
       });
+
+      it('should reduce, even if array starts with missing indices', () => {
+        const reduceResult =
+          [, 1, 2, 3].myReduce(function callback(accumulator, currentValue) {
+            return accumulator + currentValue;
+          }, 0);
+
+        assert.strictEqual(reduceResult, 6);
+      });
     });
 
     context('array is empty', () => {
