@@ -150,6 +150,16 @@ describe('Array #myReduce()', () => {
 
         assert.strictEqual(numberOfTimesCallbackHasRun, 1);
       });
+
+      it('should not run callback on missing indices throughout array', () => {
+        let numberOfTimesCallbackHasRun = 0;
+
+        ['initial value', , 'item'].myReduce(function callback() {
+          numberOfTimesCallbackHasRun++;
+        });
+
+        assert.strictEqual(numberOfTimesCallbackHasRun, 1);
+      });
     });
   });
 });
