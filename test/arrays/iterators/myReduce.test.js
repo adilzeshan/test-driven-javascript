@@ -233,6 +233,18 @@ describe('Array #myReduce()', () => {
 
         assert.strictEqual(isError, true);
       });
+
+      it('should throw a TypeError for sparse array', () => {
+        let isError = false;
+
+        try {
+          [, , , ].myReduce(function callback() { });
+        } catch (error) {
+          isError = error instanceof TypeError;
+        }
+
+        assert.strictEqual(isError, true);
+      });
     });
   });
 });
