@@ -220,5 +220,19 @@ describe('Array #myReduce()', () => {
         assert.strictEqual(numberOfTimesCallbackHasRun, 0);
       });
     });
+
+    context('array is empty', () => {
+      it('should throw a TypeError', () => {
+        let isError = false;
+
+        try {
+          [].myReduce(function callback() { });
+        } catch (error) {
+          isError = error instanceof TypeError;
+        }
+
+        assert.strictEqual(isError, true);
+      });
+    });
   });
 });
