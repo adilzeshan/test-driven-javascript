@@ -169,6 +169,15 @@ describe('Array #myReduce()', () => {
 
         assert.strictEqual(numberOfTimesCallbackHasRun, 1);
       });
+
+      it('should reduce, even if array starts with missing indices', () => {
+        const reduceResult =
+          [, 1, 2, 3].myReduce(function callback(accumulator, currentValue) {
+            return accumulator + currentValue;
+          });
+
+        assert.strictEqual(reduceResult, 6);
+      });
     });
   });
 });
