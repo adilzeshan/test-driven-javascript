@@ -104,4 +104,18 @@ describe('Array #myReduce()', () => {
       });
     });
   });
+
+  context('without optional initial value', () => {
+    context('array is dense', () => {
+      it('should run the callback array.length - 1 times', () => {
+        let numberOfTimesCallbackHasRun = 0;
+
+        ['item', 'item', 'item'].myReduce(function callback() {
+          numberOfTimesCallbackHasRun++;
+        });
+
+        assert.strictEqual(numberOfTimesCallbackHasRun, 2);
+      });
+    });
+  });
 });
