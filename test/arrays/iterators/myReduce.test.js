@@ -209,6 +209,16 @@ describe('Array #myReduce()', () => {
 
         assert.strictEqual(reduceResult, 'item');
       });
+
+      it('should not run callback for array with only one element', () => {
+        let numberOfTimesCallbackHasRun = 0;
+
+        [, , 'item'].myReduce(function callback() {
+          numberOfTimesCallbackHasRun++;
+        });
+
+        assert.strictEqual(numberOfTimesCallbackHasRun, 0);
+      });
     });
   });
 });
