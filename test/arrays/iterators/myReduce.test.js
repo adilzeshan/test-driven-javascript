@@ -131,6 +131,13 @@ describe('Array #myReduce()', () => {
             assert.strictEqual(currentValue, 'item');
           });
       });
+
+      it('should start by setting third argument to second index', () => {
+        ['initial value', 'item']
+          .myReduce(function callback(accumulator, currentValue, currentIndex) {
+            assert.strictEqual(currentIndex, 1);
+          });
+      });
     });
   });
 });
