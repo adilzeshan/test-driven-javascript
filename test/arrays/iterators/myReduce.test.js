@@ -116,6 +116,15 @@ describe('Array #myReduce()', () => {
 
         assert.strictEqual(numberOfTimesCallbackHasRun, 2);
       });
+
+      it('should actually reduce', () => {
+        const reduceResult =
+          [1, 2, 3].myReduce(function callback(accumulator, currentValue) {
+            return accumulator + currentValue;
+          });
+
+        assert.strictEqual(reduceResult, 6);
+      });
     });
 
     context('callback parameters', () => {
