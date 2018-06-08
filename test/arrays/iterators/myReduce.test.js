@@ -124,6 +124,13 @@ describe('Array #myReduce()', () => {
           assert.strictEqual(accumulator, 'initial value');
         });
       });
+
+      it('should start by setting second argument to second element', () => {
+        ['initial value', 'item']
+          .myReduce(function callback(accumulator, currentValue) {
+            assert.strictEqual(currentValue, 'item');
+          });
+      });
     });
   });
 });
