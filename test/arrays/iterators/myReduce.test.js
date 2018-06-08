@@ -203,6 +203,12 @@ describe('Array #myReduce()', () => {
 
         assert.strictEqual(reduceResult, 6);
       });
+
+      it('should return solo value for array with only one element', () => {
+        const reduceResult = [, , 'item'].myReduce(function callback() { });
+
+        assert.strictEqual(reduceResult, 'item');
+      });
     });
   });
 });
