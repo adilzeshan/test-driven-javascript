@@ -247,4 +247,20 @@ describe('Array #myReduce()', () => {
       });
     });
   });
+
+  context('optional callback parameter', () => {
+    it('should pass in original array as fourth argument to callback', () => {
+      const testArray = ['item', 'item'];
+
+      testArray.myReduce(
+        function callback(
+          accumulator,
+          currentValue,
+          currentIndex,
+          originalArray
+        ) {
+          assert.strictEqual(originalArray, testArray);
+        });
+    });
+  });
 });
