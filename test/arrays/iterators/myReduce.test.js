@@ -178,6 +178,15 @@ describe('Array #myReduce()', () => {
 
         assert.strictEqual(reduceResult, 6);
       });
+
+      it('should reduce, even if array has missing indices throughout', () => {
+        const reduceResult =
+          [1, , 2, , 3].myReduce(function callback(accumulator, currentValue) {
+            return accumulator + currentValue;
+          });
+
+        assert.strictEqual(reduceResult, 6);
+      });
     });
   });
 });
