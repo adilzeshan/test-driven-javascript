@@ -10,7 +10,7 @@ This project reimplements various built-in JavaScript methods using test-driven 
 | [`.forEach`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) | `.myEach`       | [`myEach.test.js`](/test/arrays/iterators/myEach.test.js) | [`myEach.js`](/lib/arrays/iterators/myEach.js) |
 | [`.map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) | `.myMap`        | [`myMap.test.js`](/test/arrays/iterators/myMap.test.js) | [`myMap.js`](/lib/arrays/iterators/myMap.js) |
 | [`.filter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) | `.myFilter`     | [`myFilter.test.js`](/test/arrays/iterators/myFilter.test.js) | [`myFilter.js`](/lib/arrays/iterators/myFilter.js) |
-| [`.reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) | `.myReduce`     | | |
+| [`.reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) | `.myReduce`     | [`myReduce.test.js`](/test/arrays/iterators/myReduce.test.js) | [`myReduce.js`](/lib/arrays/iterators/myReduce.js) |
 | [`.reduceRight`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) | `.myReduceRight`| | |
 | [`.every`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every) | `.myEvery`      | | |
 | [`.some`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some) | `.mySome`       | | |
