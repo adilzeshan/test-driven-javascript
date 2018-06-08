@@ -139,5 +139,17 @@ describe('Array #myReduce()', () => {
           });
       });
     });
+
+    context('array is sparse', () => {
+      it('should not run callback on missing indices at start of array', () => {
+        let numberOfTimesCallbackHasRun = 0;
+
+        [, 'initial value', 'item'].myReduce(function callback() {
+          numberOfTimesCallbackHasRun++;
+        });
+
+        assert.strictEqual(numberOfTimesCallbackHasRun, 1);
+      });
+    });
   });
 });
