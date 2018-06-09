@@ -1,0 +1,28 @@
+{
+    "extends": "google",
+    "env": {
+        "node": true,
+        "browser": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "rules": {
+        "no-extend-native": [
+            "error",
+            {
+                "exceptions": [
+                    "Object",
+                    "Array",
+                    "Function",
+                    "String",
+                    "Number",
+                    "Boolean"
+                ]
+            }
+        ],
+        "no-invalid-this": "off",
+        "object-curly-spacing": "off",
+        "array-bracket-spacing": "off"
+    }
+}

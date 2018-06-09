@@ -1,0 +1,35 @@
+{
+  "name": "adil",
+  "version": "0.0.1",
+  "description": "A reimplementation of JavaScript methods via TDD",
+  "main": "",
+  "scripts": {
+    "test": "mocha --recursive --ui bdd",
+    "watch": "mocha --recursive --ui bdd --watch ./test ./lib",
+    "lint": "eslint",
+    "precommit": "npm test",
+    "prepush": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adilzeshan/test-driven-javascript.git"
+  },
+  "keywords": [
+    "javascript",
+    "tdd",
+    "test-driven-development"
+  ],
+  "author": "Adil Zeshan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adilzeshan/test-driven-javascript/issues"
+  },
+  "homepage": "https://github.com/adilzeshan/test-driven-javascript#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "husky": "^0.14.3",
+    "mocha": "^5.2.0"
+  }
+}
