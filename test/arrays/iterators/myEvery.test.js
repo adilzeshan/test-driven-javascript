@@ -18,4 +18,12 @@ describe('Array #myEvery()', () => {
       });
     });
   });
+
+  context('callback parameters', () => {
+    it('should pass in ith element as first argument to callback', () => {
+      ['item'].myEvery(function callback(element) {
+        assert.strictEqual(element, 'item');
+      });
+    });
+  });
 });
