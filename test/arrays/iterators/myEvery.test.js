@@ -31,5 +31,13 @@ describe('Array #myEvery()', () => {
         assert.strictEqual(index, 0);
       });
     });
+
+    it('should pass in original array as third argument to callback', () => {
+      const testArray = ['item', 'item'];
+
+      testArray.myEvery(function callback(element, index, originalArray) {
+        assert.strictEqual(originalArray, testArray);
+      });
+    });
   });
 });
