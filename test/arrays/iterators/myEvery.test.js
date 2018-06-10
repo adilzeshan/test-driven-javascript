@@ -77,4 +77,17 @@ describe('Array #myEvery()', () => {
       }, { prop: 'I am accessible inside the callback.' });
     });
   });
+
+  context('array is sparse', () => {
+    it('should not run callback on undeclared indices', () => {
+      let numberOfTimesCallbackHasRun = 0;
+
+      [, , 'item'].myEvery(function callback() {
+        numberOfTimesCallbackHasRun++;
+        return true;
+      });
+
+      assert.strictEqual(numberOfTimesCallbackHasRun, 1);
+    });
+  });
 });
