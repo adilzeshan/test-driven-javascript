@@ -37,6 +37,14 @@ describe('Array #myEvery()', () => {
 
         assert.strictEqual(numberOfTimesCallbackHasRun, 2);
       });
+
+      it('should return false if any callback is falsy', () => {
+        const everyResult = ['item'].myEvery(function callback() {
+          return false;
+        });
+
+        assert.strictEqual(everyResult, false);
+      });
     });
   });
 
