@@ -16,6 +16,14 @@ describe('Array #myEvery()', () => {
 
         assert.strictEqual(numberOfTimesCallbackHasRun, 3);
       });
+
+      it('should return true', () => {
+        const everyResult = ['item'].myEvery(function callback() {
+          return true;
+        });
+
+        assert.strictEqual(everyResult, true);
+      });
     });
   });
 
