@@ -25,6 +25,19 @@ describe('Array #myEvery()', () => {
         assert.strictEqual(everyResult, true);
       });
     });
+
+    context('a callback returns a falsy value', () => {
+      it('should terminate early and immediately', () => {
+        let numberOfTimesCallbackHasRun = 0;
+
+        [true, false, true].myEvery(function callback(element) {
+          numberOfTimesCallbackHasRun++;
+          return element;
+        });
+
+        assert.strictEqual(numberOfTimesCallbackHasRun, 2);
+      });
+    });
   });
 
   context('callback parameters', () => {
