@@ -40,4 +40,12 @@ describe('Array #mySome()', () => {
       });
     });
   });
+
+  context('optional parameter', () => {
+    it('should accept an optional this object', () => {
+      ['item'].mySome(function callback() {
+        assert.strictEqual(this.prop, 'I am accessible inside the callback.');
+      }, { prop: 'I am accessible inside the callback.' });
+    });
+  });
 });
