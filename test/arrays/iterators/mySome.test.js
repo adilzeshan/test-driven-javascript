@@ -38,6 +38,14 @@ describe('Array #mySome()', () => {
 
       assert.strictEqual(numberOfTimesCallbackHasRun, 2);
     });
+
+    it('should return true', () => {
+      const someResult = ['item'].mySome(function callback() {
+        return true;
+      });
+
+      assert.strictEqual(someResult, true);
+    });
   });
 
   context('callback parameters', () => {
