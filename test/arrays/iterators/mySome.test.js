@@ -90,4 +90,12 @@ describe('Array #mySome()', () => {
       assert.strictEqual(numberOfTimesCallbackHasRun, 1);
     });
   });
+
+  context('array is empty', () => {
+    it('should return false', () => {
+      const someResult = [].mySome(function callback() { });
+
+      assert.strictEqual(someResult, false);
+    });
+  });
 });
