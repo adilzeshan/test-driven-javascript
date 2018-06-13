@@ -27,6 +27,19 @@ describe('Array #mySome()', () => {
     });
   });
 
+  context('a callback returns a truthy value', () => {
+    it('should terminate early and immediately', () => {
+      let numberOfTimesCallbackHasRun = 0;
+
+      [false, true, false].mySome(function callback(element) {
+        numberOfTimesCallbackHasRun++;
+        return element;
+      });
+
+      assert.strictEqual(numberOfTimesCallbackHasRun, 2);
+    });
+  });
+
   context('callback parameters', () => {
     it('should pass in ith element as first argument to callback', () => {
       ['item'].mySome(function callback(element) {
