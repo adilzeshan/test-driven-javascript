@@ -66,5 +66,14 @@ describe('Array #myFind()', () => {
 
       assert.strictEqual(numberOfTimesCallbackHasRun, 2);
     });
+
+    it('should return the element for which callback is truthy', () => {
+      const findResult =
+        ['item 1', 'item 2', 'item 3'].myFind(function callback(element) {
+          return element === 'item 2';
+        });
+
+      assert.strictEqual(findResult, 'item 2');
+    });
   });
 });
