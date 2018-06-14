@@ -15,4 +15,12 @@ describe('Array #myFindIndex()', () => {
       assert.strictEqual(numberOfTimesCallbackHasRun, 3);
     });
   });
+
+  context('callback parameters', () => {
+    it('should pass in ith element as first argument to callback', () => {
+      ['item'].myFindIndex(function callback(element) {
+        assert.strictEqual(element, 'item');
+      });
+    });
+  });
 });
