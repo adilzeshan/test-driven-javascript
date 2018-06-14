@@ -15,7 +15,7 @@ This project reimplements various built-in JavaScript methods using test-driven 
 | [`.every`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every) | `.myEvery`      | [`myEvery.test.js`](/test/arrays/iterators/myEvery.test.js) | [`myEvery.js`](/lib/arrays/iterators/myEvery.js) |
 | [`.some`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some) | `.mySome`       | [`mySome.test.js`](/test/arrays/iterators/mySome.test.js) | [`mySome.js`](/lib/arrays/iterators/mySome.js) |
 | [`.find`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) | `.myFind`       | [`myFind.test.js`](/test/arrays/iterators/myFind.test.js) | [`myFind.js`](/lib/arrays/iterators/myFind.js) |
-| [`.findIndex`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex) | `.myFindIndex`  | | |
+| [`.findIndex`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex) | `.myFindIndex`  | [`myFindIndex.test.js`](/test/arrays/iterators/myFindIndex.test.js) | [`myFindIndex.js`](/lib/arrays/iterators/myFindIndex.js) |
 
 ### Accessors
 
