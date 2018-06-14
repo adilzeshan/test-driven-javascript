@@ -16,4 +16,12 @@ describe('Array #myFind()', () => {
       assert.strictEqual(numberOfTimesCallbackHasRun, 3);
     });
   });
+
+  context('callback parameters', () => {
+    it('should pass in ith element as first argument to callback', () => {
+      ['item'].myFind(function callback(element) {
+        assert.strictEqual(element, 'item');
+      });
+    });
+  });
 });
