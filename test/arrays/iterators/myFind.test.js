@@ -54,4 +54,17 @@ describe('Array #myFind()', () => {
       }, { prop: 'I am accessible inside the callback.' });
     });
   });
+
+  context('a callback returns a truthy value', () => {
+    it('should terminate early and immediately', () => {
+      let numberOfTimesCallbackHasRun = 0;
+
+      [false, true, false].myFind(function callback(element) {
+        numberOfTimesCallbackHasRun++;
+        return element;
+      });
+
+      assert.strictEqual(numberOfTimesCallbackHasRun, 2);
+    });
+  });
 });
