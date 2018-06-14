@@ -15,6 +15,14 @@ describe('Array #myFind()', () => {
 
       assert.strictEqual(numberOfTimesCallbackHasRun, 3);
     });
+
+    it('should return undefined', () => {
+      const findResult = ['item', 'item', 'item'].myFind(function callback() {
+        return false;
+      });
+
+      assert.strictEqual(findResult, undefined);
+    });
   });
 
   context('callback parameters', () => {
