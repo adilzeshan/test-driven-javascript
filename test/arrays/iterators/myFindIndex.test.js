@@ -28,5 +28,13 @@ describe('Array #myFindIndex()', () => {
         assert.strictEqual(index, 0);
       });
     });
+
+    it('should pass in original array as third argument to callback', () => {
+      const testArray = ['item', 'item'];
+
+      testArray.myFindIndex(function callback(element, index, originalArray) {
+        assert.strictEqual(originalArray, testArray);
+      });
+    });
   });
 });
