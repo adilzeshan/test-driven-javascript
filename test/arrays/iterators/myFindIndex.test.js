@@ -14,6 +14,15 @@ describe('Array #myFindIndex()', () => {
 
       assert.strictEqual(numberOfTimesCallbackHasRun, 3);
     });
+
+    it('should return -1', () => {
+      const findIndexResult =
+        ['item', 'item', 'item'].myFindIndex(function callback() {
+          return false;
+        });
+
+      assert.strictEqual(findIndexResult, -1);
+    });
   });
 
   context('callback parameters', () => {
