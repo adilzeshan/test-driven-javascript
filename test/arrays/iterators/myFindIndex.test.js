@@ -66,5 +66,14 @@ describe('Array #myFindIndex()', () => {
 
       assert.strictEqual(numberOfTimesCallbackHasRun, 2);
     });
+
+    it('should return index of element for which callback is truthy', () => {
+      const findIndexResult =
+        ['item 1', 'item 2', 'item 2'].myFindIndex(function callback(element) {
+          return element === 'item 2';
+        });
+
+      assert.strictEqual(findIndexResult, 1);
+    });
   });
 });
